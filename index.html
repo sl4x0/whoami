@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>SL4X0</title>
+        <meta
+            name="description"
+            content="particles.js is a lightweight JavaScript library for creating particles."
+        />
+        <meta name="author" content="Abdelrhman Allam" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <link rel="stylesheet" media="screen" href="css/style.css" />
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,900&display=swap');
+
+        .container {
+            width: 490px;
+            padding: 50px;
+            border-radius: 10px;
+			position: absolute;
+			left: calc(50% - 250px);
+			top: calc(50% - 250px);
+		}
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .header img {
+            width: 150px;
+            border-radius: 100%;
+            border: 5px solid #001afff5;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fffffff5;
+            font-family: 'ital', sans-serif;
+            font-weight: 500;
+            margin-left: 20px;
+        }
+
+        .header p {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #77235cbe;
+            font-family: 'Montserrat', sans-serif;
+            padding-top: 10px;
+            padding-left: 20px;
+            color: rgb(221, 219, 219);
+        }
+        .body .discreption {
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px 20px 20px 20px;
+            background-color: rgba(255, 255, 255, 0.11);
+            padding: 10px;
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            z-index: 1;
+			font-size: 15px;
+        }
+		.social_media {
+			display:flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 30px 150px;
+		}
+
+		.social_media li {
+			padding-left: 10px;
+		}
+		.social_media svg { 
+			fill: rgb(212, 212, 212);
+			transition: .1s ease;
+		}
+		.social_media svg:hover {
+			fill: #001afff5;
+		}
+
+		@media only screen and (max-width: 800px) {
+			.container {
+				width: calc(100% - 100px);
+				position: absolute;
+				left: 0;
+			}
+
+			.header img {
+				width: 100px;
+				border-radius: 50%;
+            	border: 5px solid #001afff5;
+        	}
+
+			.header h1 {
+				font-size: 2rem;
+        	}
+
+			.header p {
+        	    font-size: .9rem;
+			}
+
+			.body .discreption {
+				font-size: 14px;
+			}
+		}
+		.tooltip {
+			position: relative;
+			display: inline-block;
+			border-bottom: 1px dotted black;
+		}
+
+		.tooltip .tooltiptext {
+			visibility: hidden;
+			width: 120px;
+			background-color: rgba(238, 238, 238, 0.192);
+			color: #eee;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px 0;
+			position: absolute;
+			z-index: 1;
+			bottom: -110%;
+			left: 50%;
+			margin-left: -60px;
+			border: solid 1px rgba(238, 238, 238, 0.39);
+		}
+
+		.tooltip .tooltiptext::after {
+			content: "";
+			position: absolute;
+			top: -11px;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+			transform: rotate(180deg);
+			border-color: rgba(238, 238, 238, 0.39) transparent transparent transparent;
+		}
+
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+		}
+
+    </style>œ
+    <body>
+        
+            <div class="container">
+                <div class="header">
+                    <img src="img/avatar1.png" alt="avatar" />
+                    <div>
+                        <h1>Abdelrhman Allam</h1>
+                        <p>@sl4x0</p>
+                    </div>
+                </div>
+                <div class="body">
+                    <p class="discreption">
+                        Independent Security Researcher and Bug Hunter
+                    </p>
+					<ul class="social_media">
+						<li><a href="https://github.com/sl4x0" target="_blank" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></a></li>
+						<li><a href="https://twitter.com/sl4x0" target="_blank" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+							<path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path></svg></a></li>
+						<li><a href="https://discord.com/users/SL4X0#4784" target="_blank" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+							<path d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1 14.66 14.66 0 0 0-4.58 0 10.14 10.14 0 0 0-.53-1.1 16 16 0 0 0-4.13 1.3 17.33 17.33 0 0 0-3 11.59 16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83 3.39 3.39 0 0 0 .42-.33 11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84 12.41 12.41 0 0 0 1.08 1.78 16.44 16.44 0 0 0 5.06-2.59 17.22 17.22 0 0 0-3-11.59 16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.93 1.93 0 0 1 1.8 2 1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.92 1.92 0 0 1 1.8 2 1.92 1.92 0 0 1-1.8 2z"></path></svg></a></li>
+						<li><a href="https://www.linkedin.com/in/sl4x0/" target="_blank" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path></svg></a></li>
+						<li><a href="https://sl4x0.github.io" target="_blank" ><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            width="20px" height="20px" viewBox="0 0 92 92" enable-background="new 0 0 92 92" xml:space="preserve">
+                       <path id="XMLID_1960_" d="M76,2H16c-2.2,0-4,1.8-4,4v80c0,2.2,1.8,4,4,4h60c2.2,0,4-1.8,4-4V6C80,3.8,78.2,2,76,2z M72,82H20V10h52
+                           V82z M28.5,65c0-2.2,1.8-4,4-4h27c2.2,0,4,1.8,4,4s-1.8,4-4,4h-27C30.3,69,28.5,67.2,28.5,65z M29.1,46c0-2.2,1.8-4,4-4h26.3
+                           c2.2,0,4,1.8,4,4s-1.8,4-4,4H33.1C30.9,50,29.1,48.2,29.1,46z M29.1,27c0-2.2,1.8-4,4-4h26.3c2.2,0,4,1.8,4,4s-1.8,4-4,4H33.1
+                           C30.9,31,29.1,29.2,29.1,27z"/>
+                       </svg></a></li>
+                        
+					</ul>
+				</div>
+            </div>
+        <!-- particles.js container -->
+        <div id="particles-js"></div>
+
+        <!-- scripts -->
+        <script src="particles.js"></script>
+        <script src="js/app.js"></script>
+
+        <!-- stats.js -->
+        <script src="js/lib/stats.js"></script>
+        <script>
+            var count_particles, stats, update;
+            stats = new Stats();
+            stats.setMode(0);
+            stats.domElement.style.position = 'absolute';
+            stats.domElement.style.left = '0px';
+            stats.domElement.style.top = '0px';
+            document.body.appendChild(stats.domElement);
+            count_particles = document.querySelector('.js-count-particles');
+            update = function () {
+                stats.begin();
+                stats.end();
+                if (
+                    window.pJSDom[0].pJS.particles &&
+                    window.pJSDom[0].pJS.particles.array
+                ) {
+                    count_particles.innerText =
+                        window.pJSDom[0].pJS.particles.array.length;
+                }
+                requestAnimationFrame(update);
+            };
+            requestAnimationFrame(update);
+        </script>
+    </body>
+</html>
