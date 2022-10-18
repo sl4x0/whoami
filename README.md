@@ -1,2 +1,2 @@
-# whomai
+# whoami
 Simple WHOAMI website
